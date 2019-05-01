@@ -19,7 +19,7 @@ export class RecipeService {
         new Recipe(
             'A Second Recipe',
             'A second is a test description',
-            'https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/2048x1024/landscape-1520957481-grilled-salmon-horizontal.jpg?resize=1200:*',
+            'https://s3.amazonaws.com/pixtruder/original_images/9fbb73a7cba9b7b75c3d05484f6b6d087470641d',
             [
                 new Ingredient('Buns', 2),
                 new Ingredient('Meat', 1)
@@ -32,6 +32,10 @@ export class RecipeService {
 
       getRecipes() {
           return this.recipes.slice();
+      }
+
+      getRecipe(id: number) {
+          return this.recipes[id];
       }
 
       addIngredientsToShoppingList(ingredients: Ingredient[]) {
